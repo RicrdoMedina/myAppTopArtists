@@ -4,12 +4,14 @@
     h1 Project Music
     select(v-model="selectedCountry")
       option(v-for="country in counties" v-bind:value="country.value") {{ country.name }}
+    spinner(v-show="loading")
     ul
       artist(v-for="artist in artists" v-bind:artist="artist" v-bind:key="artist.mbid")
 </template>
 
 <script> 
 import Artist from './components/Artist.vue'
+import Spinner from './components/Spinner.vue'
 import getArtists from './api'
 
 export default {
@@ -22,18 +24,23 @@ export default {
         { name : 'Colombia', value : 'colombia' },
         { name : 'España', value : 'spain' }
       ],
-      selectedCountry: 'argentina'
+      selectedCountry: 'argentina',
+      loading: true
     }
   },
   components:{
-    Artist
+    Artist,
+    Spinner
   },
   methods: {
     refreshArtist() {
       const self = this
+      this.loading = true
+      this.artists = []
       getArtists(this.selectedCountry)
         .then( function (artists) {
           self.artists = artists
+          self.loading = false
         })
     }
   },
