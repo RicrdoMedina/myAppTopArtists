@@ -1,7 +1,6 @@
 <template lang="pug">
   #app
     img(src='./assets/logo.png')
-    h1 {{ msg }}
     h2 Project Music
     ul
       li(v-for="artist in artists") {{ artist.name }}
