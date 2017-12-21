@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # platzimusic
 
 > Proyecto del curso de introduccion a vue.js de platzi
@@ -16,3 +17,7 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# myAppTopArtists
+Practica front-end implementando vue.js y stylus
+>>>>>>> origin/master
