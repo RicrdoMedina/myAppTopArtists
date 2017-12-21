@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    img(src='./assets/logo.png')
+    img(src='https://rcrdmedina.github.io/myAppTopArtists/src/assets/logo.png')
     h1 Project Music
     select(v-model="selectedCountry")
       option(v-for="country in counties" v-bind:value="country.value") {{ country.name }}
