@@ -1,6 +1,6 @@
 <template lang="pug">
   #app
-    img(src='/dist/vue.png')
+    img(src='dist/vue.png')
     h1 Project Music
     select(v-model="selectedCountry")
       option(v-for="country in counties" v-bind:value="country.value") {{ country.name }}
